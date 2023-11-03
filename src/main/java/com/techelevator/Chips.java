@@ -6,23 +6,29 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Chips extends VendingItem {
-
-
-    public Chips(String name, double price, String slotID) {
-        super(name, price, slotID);
-    }
-
-
-    public static void main(String[] args) {
-
-
-        Map<String , Double> chips = new HashMap<String, Double>();
-        chips.put("A1", 3.05);
-        chips.put("A2", 1.45);
-        chips.put("A3", 2.75);
-        chips.put("A4", 3.65);
+    @Override
+    public void vendingMessage() {
+        System.out.println( "Crunch Crunch, It's Yummy!");
 
     }
+    //****CI: I added the override
+
+
+//    public Chips(String name, double price, String slotID) {
+//        super(name, price, slotID);
+//    }
+//
+//
+//    public static void main(String[] args) {
+//
+//
+//        Map<String , Double> chips = new HashMap<String, Double>();
+//        chips.put("A1", 3.05);
+//        chips.put("A2", 1.45);
+//        chips.put("A3", 2.75);
+//        chips.put("A4", 3.65);
+//
+//    }
 
 
 }

@@ -6,21 +6,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Gum extends VendingItem {
-
-    public Gum(String name, double price, String slotID) {
-        super(name, price, slotID);
-    }
-
-    public static void main(String[] args) {
-
-        Map<String , Double> gum = new HashMap<String, Double>();
-        gum.put("D1", 0.85);
-        gum.put("D2", 0.95);
-        gum.put("D3", 0.75);
-        gum.put("D4", 0.75);
-
+    @Override
+    public void vendingMessage() {
+        System.out.println("Chew Chew, Pop!");
 
     }
+    //****CI: I added the override
+
+//    public Gum(String name, double price, String slotID) {
+//        super(name, price, slotID);
+//    }
+//
+//    public static void main(String[] args) {
+//
+//        Map<String , Double> gum = new HashMap<String, Double>();
+//        gum.put("D1", 0.85);
+//        gum.put("D2", 0.95);
+//        gum.put("D3", 0.75);
+//        gum.put("D4", 0.75);
+//
+//
+//    }
 }
 //How do we connect this map to CLI class?
 //How do we connect 'name' 'price' & 'slotID'??

@@ -6,21 +6,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Beverages extends VendingItem {
+    public Beverages() {
 
-    public Beverages(String name, double price, String slotID) {
-        super(name, price, slotID);
-    }
-
-    public static void main(String[] args) {
-
-        Map<String , Double> beverage = new HashMap<String, Double>();
-        beverage.put("C1", 1.25);
-        beverage.put("C2", 1.50);
-        beverage.put("C3", 1.50);
-        beverage.put("C4", 1.50);
 
     }
 
+    @Override
+    public void vendingMessage() {
+        System.out.println("Glug Glug, Chug Chug!");
+
+    }
+    //****CI: I added the override
+
+    //    public Beverages(String name, double price, String slotID) {
+//        super(name, price, slotID);
+//    }
+//
+//    public static void main(String[] args) {
+//
+//        Map<String , Double> beverage = new HashMap<String, Double>();
+//        beverage.put("C1", 1.25);
+//        beverage.put("C2", 1.50);
+//        beverage.put("C3", 1.50);
+//        beverage.put("C4", 1.50);
+//
+//    }
+//
 
 
 }

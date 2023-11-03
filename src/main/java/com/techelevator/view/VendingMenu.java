@@ -47,7 +47,7 @@ public class VendingMenu {
 			int optionNum = i + 1;
 			out.println(optionNum + ") " + options[i]);
 		}
-		out.print(System.lineSeparator() + "Please choose an option >>> ");
+		out.print(System.lineSeparator() + "Please choose an option >>> \n"); //****CI: added \n to make formatting better
 		out.flush();
 	}
 }
