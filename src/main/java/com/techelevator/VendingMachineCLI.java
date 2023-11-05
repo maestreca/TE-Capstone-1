@@ -91,15 +91,30 @@ public class VendingMachineCLI {
 
 
 
-//****CI: This is the example he gave us in our session:
-//				choice = (String) menu.getChoiceFromOptions(PURCHASE_MENU_OPTIONS);
-//				vendingMachine.setBalance(50);
-//				System.out.println(vendingMachine.getBalance());
-//
-//				vendingMachine.purchase("C1");
+			} else if (choice.equals(MAIN_MENU_OPTION_EXIT)) { //###CI: Added the Exit option
+				//Finish the transaction
+				int remainingBalanceCents = (int) (vendingMachine.getBalance() * 100);
 
+				int quarters = remainingBalanceCents / 25;
+				int remainingCentsAfterQuarters = remainingBalanceCents % 25;
+				int dimes = remainingCentsAfterQuarters / 10;
+				int remainingCentsAfterDimes = remainingCentsAfterQuarters % 10;
+				int nickels = remainingCentsAfterDimes / 5;
+
+				System.out.println("Change returned: " + quarters + " quarters, " + dimes + " dimes, " + nickels + " nickels.");
+
+				vendingMachine.setBalance(0); //Reset balance to zero
+
+				running = false; //Exit the loop and return to main menu
+
+
+			} else{
+
+				System.out.println("Invalid choice. Please try again.");
+				System.out.println(vendingMachine.displayMenuItems());
 
 			}
+
 		}
 
 		scanner.close(); //***CI: we have close the scanner when we're done with it

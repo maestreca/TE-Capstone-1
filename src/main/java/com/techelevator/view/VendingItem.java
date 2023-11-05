@@ -2,13 +2,13 @@ package com.techelevator.view;
 
 public abstract class VendingItem {
 
-    //Attributes
-
     private String slotLocation;
     private String name;
     private double price;
     private String itemType;
     private int inventoryAvailable; //5 at the beginning.
+
+    private String vendingMessage;
 
     public VendingItem(String name, double price, String slotID) {
     }
@@ -17,8 +17,9 @@ public abstract class VendingItem {
 
     }
 
-    public VendingItem(String slotLocation, String name, double price, String itemType, int inventoryAvailable) {
+    public VendingItem(String name, double price, String slotID, String vendingMessage) {
     }
+
 
     //Hasn't created constructors yet. Is using the setters to set the values
 
@@ -64,8 +65,21 @@ public abstract class VendingItem {
         return inventoryAvailable;
     }
 
+    public String getVendingMessage() {
+        return vendingMessage;
+    }
 
-    public abstract void vendingMessage();
+    public void setVendingMessage(String vendingMessage) {
+        this.vendingMessage = vendingMessage;
+    }
+
+
+
+    //Methods:
+
+    public abstract String vendingMessage();
+
+
 }
 
 

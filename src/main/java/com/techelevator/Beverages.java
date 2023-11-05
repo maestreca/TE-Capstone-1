@@ -6,16 +6,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Beverages extends VendingItem {
-    public Beverages() {
 
-
+    public Beverages(String name, double price, String slotID) {
+        super(name, price, slotID);
     }
 
     @Override
-    public void vendingMessage() {
-        System.out.println("Glug Glug, Chug Chug!");
+    public String vendingMessage() {
 
+        return "Glug Glug, Chug Chug!";
     }
+
     //****CI: I added the override
 
     //    public Beverages(String name, double price, String slotID) {
